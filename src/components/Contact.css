@@ -1,7 +1,7 @@
 
 #contact {
     padding: 50px 0;
-    background-color: #f5f5f5;
+    background-color: rgba(14, 58, 83, 0.95);
     text-align: center;
   }
   
@@ -12,6 +12,7 @@
   
   #contact label {
     display: block;
+    color: white;
     margin-bottom: 10px;
     font-size: 1.2rem;
   }
@@ -27,7 +28,7 @@
   
   #contact button {
     padding: 10px 20px;
-    background-color: #4a90e2;
+    background-color: #d4b653;
     color: white;
     border: none;
     border-radius: 4px;
@@ -36,6 +37,6 @@
   }
   
   #contact button:hover {
-    background-color: #357ab7;
+    background-color: #D4AF37;
   }
   

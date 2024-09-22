@@ -20,15 +20,18 @@
 }
 
 .modal-container {
-  background: white;
+  background: #D4AF37;
   padding: 20px;
-  width: 500px; 
+  width: 700px; 
+  height: 600px; 
   max-width: 90%; 
+  max-height: 90%; 
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  transform: translateY(0); 
-  opacity: 1; 
+  transform: translateY(0);
+  opacity: 1;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow-y: auto;
 }
 
 .modal-container.visible {
@@ -44,7 +47,8 @@
   right: 10px;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333; 
+  color: #333;
+  z-index: 1001; 
 }
 
 /* Galerie d'images */
@@ -75,24 +79,32 @@ h3, h4 {
 }
 
 .modal-content {
-  padding: 20px; 
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100% - 60px); 
 }
 
 .modal-content h3 {
-  font-size: 1.8rem;
-  color: #333; 
+  font-size: 2rem; 
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd; 
+  padding-bottom: 10px;
 }
 
 .modal-content h4 {
+  font-size: 1.4rem; 
+  color: #FFFFFF;
   margin-top: 20px;
-  font-size: 1.2rem;
-  color: #555; 
+  border-left: 4px solid rgba(14, 58, 83, 0.95); 
+  padding-left: 10px; 
 }
 
 .modal-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+  margin-bottom: 15px;
 }
 
 .modal-content ul {
@@ -101,18 +113,20 @@ h3, h4 {
 }
 
 .modal-content ul li {
-  background: #f0f0f0; 
-  padding: 5px 10px;
-  margin: 5px 0;
   display: inline-block;
-  border-radius: 4px; 
+  background: rgba(14, 58, 83, 0.95);
+  color: white;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px; 
+  font-size: 0.9rem;
 }
 
 .modal-link {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 15px;
-  background-color: #4a90e2; 
+  background-color: rgba(14, 58, 83, 0.95); 
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -123,19 +137,42 @@ h3, h4 {
   background-color: #357ab8; 
 }
 
+/* Séparateur visuel */
+.modal-separator {
+  margin: 20px 0;
+  border-top: 1px solid #eee;
+}
+
 /* Slideshow d'images */
 .modal-image-slideshow {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
   margin-bottom: 20px;
+  height: 400px; 
+  position: relative;
 }
 
+/* Transition pour les images */
 .modal-image-slideshow img {
-  width: 100%; 
-  max-height: 400px; 
-  object-fit: contain; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
+.modal-image-slideshow img.active {
+  opacity: 1;
+}
+
+
 
 .prev-button, .next-button {
   background-color: rgba(0, 0, 0, 0.5);
@@ -145,7 +182,18 @@ h3, h4 {
   font-size: 1.5rem;
   cursor: pointer;
   border-radius: 50%;
-  margin: 0 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev-button {
+  left: 10px; /* Bouton précédent à gauche */
+}
+
+.next-button {
+  right: 10px; /* Bouton suivant à droite */
 }
 
 .prev-button:hover, .next-button:hover {

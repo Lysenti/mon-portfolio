@@ -7,9 +7,9 @@ const Projects = () => {
   const projectList = [
     {
       name: 'Créez la page d\'accueil d\'une agence de voyage ',
-      description: 'Ce projet a consisté à apprendre les bases du développement web.',
-      problem: 'J’ai rencontré des difficultés avec la gestion du DOM, mais j’ai appris à manipuler JavaScript efficacement.',
-      skills: ['HTML', 'CSS', 'JavaScript'],
+      description: 'Ce projet a consisté à apprendre les bases du développement web notamment via les langages HTML et CSS.',
+      problem: 'La prise en main de la maquette figma ainsi que la maitrise la manipulation FLEX et GRID. Gérer l\'adaptation du contenu à la taille de l\'écran.',
+      skills: ['HTML', 'CSS'],
       link: 'https://github.com/Lysenti/project1',
       images: [
         require('../assets/images/projet1_1.jpg'),
@@ -20,9 +20,9 @@ const Projects = () => {
     },
     {
       name: 'Créez une page web dynamique avec JavaScript',
-      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec HTML et CSS.',
-      problem: 'Problèmes d\'alignement et compatibilité cross-browser.',
-      skills: ['HTML', 'CSS'],
+      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec Javascript.',
+      problem: 'Prendre en main la notion d\'API et passer à un nouveau langage. L\'affichage de la modale a nécessité quelques temps d\'adaptation.',
+      skills: ['Javascript'],
       link: 'https://github.com/Lysenti/project2',
       images: [
         require('../assets/images/projet2_1.jpg'),
@@ -33,7 +33,7 @@ const Projects = () => {
     },
     {
       name: 'Débuggez et optimisez un site de photographe',
-      description: 'Ce projet a consisté à apprendre les bases du développement web.',
+      description: 'Ce projet a consisté à analyser les erreurs dans le code préalablement fourni, constater les dysfonctionnements et mettre en place des correctifs avec des améliorations pour le référencement et l\'affichage des images.',
       problem: 'J’ai rencontré des difficultés avec la gestion du DOM, mais j’ai appris à manipuler JavaScript efficacement.',
       skills: ['HTML', 'CSS', 'JavaScript'],
       link: 'https://github.com/Lysenti/project1',

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './Modal.css';
 
@@ -25,25 +24,41 @@ const Modal = ({ project, onClose }) => {
         {/* Slideshow d'images */}
         <div className="modal-image-slideshow">
           <button className="prev-button" onClick={prevImage}>&lt;</button>
-          <img
-            src={project.images[currentImageIndex]}
-            alt={`${project.name} ${currentImageIndex}`}
-            className="modal-image"
-          />
+          {project.images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`${project.name} ${index}`}
+              className={`modal-image ${index === currentImageIndex ? 'active' : ''}`}
+            />
+          ))}
           <button className="next-button" onClick={nextImage}>&gt;</button>
         </div>
 
-        <h3>{project.name}</h3>
-        <p>{project.description}</p>
-        <h4>Problématiques rencontrées :</h4>
-        <p>{project.problem}</p>
-        <h4>Compétences développées :</h4>
-        <ul>
-          {project.skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-        <a href={project.link} target="_blank" rel="noopener noreferrer">Voir le code sur GitHub</a>
+        <div className="modal-content">
+          <h3>{project.name}</h3>
+          <p>{project.description}</p>
+          
+          {/* Séparateur visuel */}
+          <div className="modal-separator"></div>
+
+          <h4>Problématiques rencontrées :</h4>
+          <p>{project.problem}</p>
+
+          {/* Séparateur visuel */}
+          <div className="modal-separator"></div>
+
+          <h4>Compétences développées :</h4>
+          <ul>
+            {project.skills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+          
+          <a href={project.link} target="_blank" rel="noopener noreferrer" className="modal-link">
+            Voir le code sur GitHub
+          </a>
+        </div>
       </div>
     </div>
   );
