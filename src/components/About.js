@@ -5,10 +5,10 @@ import backgroundImage from '../assets/images/596.jpg';
 
 const About = () => {
   return (
-    <section id="about" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <section id="about" className='container' style={{ backgroundImage: `url(${backgroundImage})` }}>
       <h2>Developpeuse web</h2>
       <p className="slide-text slide-1">
-        Je suis formatrice pour adulte et développeuse front-end freelance.
+        Je suis formatrice pour adulte et développeuse freelance.
       </p>
       <p className="slide-text slide-2">
         <strong>Objectifs :</strong> Développer mon activité freelance et continuer à développer mes compétences sur de nouveaux outils.

@@ -14,12 +14,19 @@ const Skills = () => {
 
   return (
     <section id="skills" className="container">
-      <h2>Compétences</h2>
-      <ul>
-        {skills.map((skill, index) => (
-          <SkillItem key={index} skill={skill} />
-        ))}
-      </ul>
+      <div className="container">
+        <h2>Compétences</h2>
+        <ul>
+          {skills.map((skill, index) => (
+            <li key={index}>
+              <strong>{skill.name}</strong>
+              <div className="progress-bar">
+                <span style={{ width: skill.level }}></span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

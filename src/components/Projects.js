@@ -1,61 +1,117 @@
-// src/components/Projects.js
+
 import React, { useState } from 'react';
-import { useInView } from 'react-intersection-observer';
 import Modal from './Modal';
 import './Projects.css';
 
 const Projects = () => {
   const projectList = [
-    { name: 'Démarrez votre formation de Développeur Web', description: 'Lorem ipsum dolor sit amet.', link: 'https://github.com/Lysenti' },
-    { name: 'Créez la page d\'accueil d\'une agence de voyage', description: 'Lorem ipsum dolor sit amet.', link: 'https://github.com/Lysenti' },
-    { name: 'Créez une page web dynamique avec JavaScript', description: 'Lorem ipsum dolor sit amet.', link: 'https://github.com/Lysenti' },
-    { name: 'Débuggez et optimisez un site de photographe', description: 'Lorem ipsum dolor sit amet.', link: 'https://github.com/Lysenti' },
-    { name: 'Créez une application web de location immobilière avec React', description: 'Lorem ipsum dolor sit amet.', link: 'https://github.com/Lysenti' },
-    { name: 'Développez le back-end d\'un site de notation de livres', description: 'Lorem ipsum dolor sit amet.', link: 'https://github.com/Lysenti' },
+    {
+      name: 'Créez la page d\'accueil d\'une agence de voyage ',
+      description: 'Ce projet a consisté à apprendre les bases du développement web.',
+      problem: 'J’ai rencontré des difficultés avec la gestion du DOM, mais j’ai appris à manipuler JavaScript efficacement.',
+      skills: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://github.com/Lysenti/project1',
+      images: [
+        require('../assets/images/projet1_1.jpg'),
+        require('../assets/images/projet1_2.jpg'),
+        require('../assets/images/projet1_3.jpg'),
+        require('../assets/images/projet1_4.jpg')
+      ]
+    },
+    {
+      name: 'Créez une page web dynamique avec JavaScript',
+      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec HTML et CSS.',
+      problem: 'Problèmes d\'alignement et compatibilité cross-browser.',
+      skills: ['HTML', 'CSS'],
+      link: 'https://github.com/Lysenti/project2',
+      images: [
+        require('../assets/images/projet2_1.jpg'),
+        require('../assets/images/projet2_2.jpg'),
+        require('../assets/images/projet2_3.jpg'),
+        require('../assets/images/projet2_4.jpg')
+      ]
+    },
+    {
+      name: 'Débuggez et optimisez un site de photographe',
+      description: 'Ce projet a consisté à apprendre les bases du développement web.',
+      problem: 'J’ai rencontré des difficultés avec la gestion du DOM, mais j’ai appris à manipuler JavaScript efficacement.',
+      skills: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://github.com/Lysenti/project1',
+      images: [
+        require('../assets/images/projet3_1.jpg'),
+        require('../assets/images/projet3_2.jpg'),
+        require('../assets/images/projet3_3.jpg')
+      ]
+    },
+    {
+      name: 'Créez une application web de location immobilière avec React',
+      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec HTML et CSS.',
+      problem: 'Problèmes d\'alignement et compatibilité cross-browser.',
+      skills: ['HTML', 'CSS'],
+      link: 'https://github.com/Lysenti/project2',
+      images: [
+        require('../assets/images/projet4_1.jpg'),
+        require('../assets/images/projet4_2.jpg'),
+        require('../assets/images/projet4_3.jpg')
+      ]
+    },
+    {
+      name: 'Développez le back-end d\'un site de notation de livres',
+      description: 'Ce projet a consisté à apprendre les bases du développement web.',
+      problem: 'J’ai rencontré des difficultés avec la gestion du DOM, mais j’ai appris à manipuler JavaScript efficacement.',
+      skills: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://github.com/Lysenti/project1',
+      images: [
+        require('../assets/images/projet5_1.jpg'),
+        require('../assets/images/projet5_2.jpg'),
+        require('../assets/images/projet5_3.jpg'),
+        require('../assets/images/projet5_4.jpg')
+      ]
+    },
+    {
+      name: 'Créez un design et le site web d\'un groupe de musique',
+      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec HTML et CSS.',
+      problem: 'Problèmes d\'alignement et compatibilité cross-browser.',
+      skills: ['HTML', 'CSS'],
+      link: 'https://github.com/Lysenti/project2',
+      images: [
+        require('../assets/images/projet6_1.jpg'),
+        require('../assets/images/projet6_2.jpg')
+      ]
+    },
+    
   ];
 
-  // État pour gérer la modale ouverte et le projet sélectionné
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // Fonction pour ouvrir la modale
   const openModal = (project) => {
     setSelectedProject(project);
   };
 
-  // Fonction pour fermer la modale
   const closeModal = () => {
     setSelectedProject(null);
   };
 
   return (
     <section id="projects">
+    <div className="project-container">
       <h2>Mes Projets</h2>
-      <ul>
+      <ul className="project-grid">
         {projectList.map((project, index) => (
-          <ProjectItem key={index} project={project} onClick={() => openModal(project)} />
+          <li key={index} className="project-card" onClick={() => openModal(project)}>
+            <img src={project.images[0]} alt={project.name} className="project-image" />
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+          </li>
         ))}
       </ul>
 
-      {/* Modale pour afficher les détails du projet */}
-      <Modal show={selectedProject !== null} onClose={closeModal} project={selectedProject} />
+        {selectedProject && (
+          <Modal project={selectedProject} onClose={closeModal} />
+        )}
+      </div>
     </section>
   );
 };
 
-const ProjectItem = ({ project, onClick }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,   // L'animation ne se déclenche qu'une fois
-    threshold: 0.1,      // L'élément est visible à 10%
-  });
-
-  return (
-    <li ref={ref} className={`project-item ${inView ? 'visible' : ''}`} onClick={onClick}>
-      <h3>{project.name}</h3>
-      <p>{project.description}</p>
-    </li>
-  );
-};
-
 export default Projects;
-
-
