@@ -1,28 +1,52 @@
-import React from 'react';
-import './Contact.css';
+import React, { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert('Message envoyé avec succès');
+      } else {
+        alert('Erreur lors de l\'envoi');
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  };
+
   return (
-    <section id="contact">
-      <div className="container">
-        <h2>Contact</h2>
-        <form action="contact.php" method="POST">
-          <label>
-            Nom :
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email :
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            Message :
-            <textarea name="message" required></textarea>
-          </label>
-          <button type="submit">Envoyer</button>
-        </form>
-      </div>
-    </section>
+    <form onSubmit={handleSubmit}>
+      <label>Nom</label>
+      <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+      <label>Email</label>
+      <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+      <label>Message</label>
+      <textarea name="message" value={formData.message} onChange={handleChange} required />
+      <button type="submit">Envoyer</button>
+    </form>
   );
 };
 

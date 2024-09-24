@@ -70,9 +70,9 @@ const Projects = () => {
     },
     {
       name: 'Créez un design et le site web d\'un groupe de musique',
-      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec HTML et CSS.',
-      problem: 'Problèmes d\'alignement et compatibilité cross-browser.',
-      skills: ['HTML', 'CSS'],
+      description: 'Ce projet consistait à créer le site web d\'un groupe de musique tout en respectant l\'identité visuelle de celui-ci.',
+      problem: 'Imaginer le design complet d\'un site, mettre en adéquation les désirs du client avec une réalité de gestion et de coût',
+      skills: ['HTML', 'CSS', 'React', 'Javascript'],
       link: 'https://github.com/Lysenti/project2',
       images: [
         require('../assets/images/projet6_1.jpg'),

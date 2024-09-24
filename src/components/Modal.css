@@ -86,7 +86,7 @@ h3, h4 {
 
 .modal-content h3 {
   font-size: 2rem; 
-  color: #FFFFFF;
+  color: rgba(14, 58, 83, 0.95);
   margin-bottom: 15px;
   border-bottom: 2px solid #ddd; 
   padding-bottom: 10px;
@@ -94,7 +94,7 @@ h3, h4 {
 
 .modal-content h4 {
   font-size: 1.4rem; 
-  color: #FFFFFF;
+  color: rgba(14, 58, 83, 0.95);
   margin-top: 20px;
   border-left: 4px solid rgba(14, 58, 83, 0.95); 
   padding-left: 10px; 
@@ -103,7 +103,7 @@ h3, h4 {
 .modal-content p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #FFFFFF;
+  color: rgba(14, 58, 83, 0.95);
   margin-bottom: 15px;
 }
 
@@ -148,6 +148,7 @@ h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
   background-color: white;
   margin-bottom: 20px;
   height: 400px; 
@@ -159,7 +160,6 @@ h3, h4 {
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-height: 400px;
@@ -175,7 +175,7 @@ h3, h4 {
 
 
 .prev-button, .next-button {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(14, 58, 83, 0.95);
   color: white;
   border: none;
   padding: 10px;

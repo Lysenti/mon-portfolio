@@ -12,6 +12,8 @@ const Skills = () => {
     { name: 'Express', level: '55%' },
   ];
 
+  
+
   return (
     <section id="skills" className="container">
       <div className="container">

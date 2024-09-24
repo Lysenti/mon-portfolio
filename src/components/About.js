@@ -14,7 +14,7 @@ const About = () => {
         <strong>Objectifs :</strong> Développer mon activité freelance et continuer à développer mes compétences sur de nouveaux outils.
       </p>
       <p className="slide-text slide-3">
-        <strong>Parcours :</strong> J'ai travaillé dans ce nombreux domaines et après une reconversion dans le domaine de la formation, je développe des sites web avec un design unique.
+        <strong>Parcours :</strong> J'ai travaillé dans ce nombreux domaines et après une reconversion dans le domaine de la formation, je développe des sites web avec un design adapté au besoins spécifiques de chacun.
       </p>
     </section>
   );

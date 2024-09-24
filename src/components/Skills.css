@@ -29,7 +29,7 @@
   #skills ul li .progress-bar span {
     display: block;
     height: 100%;
-    background-color: #4a90e2;
+    background-color: rgba(14, 58, 83, 0.95);
     border-radius: 5px;
   }
 
@@ -56,7 +56,8 @@
     height: 100%;
     background-color: #4a90e2;
     border-radius: 5px;
-    animation: fillBar 2s ease forwards;
-    width: 0; /* Par défaut, la barre commence à 0% */
+    width: 0; 
+    transition: width 2s ease; 
   }
+  
   
