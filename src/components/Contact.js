@@ -25,7 +25,14 @@ const Contact = () => {
       },
       body: JSON.stringify(formData),
     })
-    .then(response => response.json())
+    .then(response => {
+      
+      console.log('Raw response:', response);
+
+      return response.text();
+    })
+
+
     .then(data => {
       if (data.success) {
         console.log('Email envoyé avec succès:', data.message);
