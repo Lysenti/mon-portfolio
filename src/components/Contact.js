@@ -34,16 +34,20 @@ const Contact = () => {
 
 
     .then(data => {
-      if (data.success) {
-        console.log('Email envoyé avec succès:', data.message);
-      } else {
-        console.log('Erreur d\'envoi d\'email:', data.message);
+
+      console.log('Response received from backend:', data);
+
+      try {
+        const jsonResponse = JSON.parse(data);
+        console.log('Parsed JSON:', jsonResponse);
+      } catch (err) {
+        console.error('Error parsing JSON:', err);
       }
     })
     .catch((error) => {
-      console.error('Erreur:', error);
+      console.error('Error:', error);
     });
-  };
+};
 
   return (
     <section id="contact">
