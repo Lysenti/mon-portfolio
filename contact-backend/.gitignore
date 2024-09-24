@@ -1,4 +1,4 @@
-echo "contact-backend/.env" >> .gitignore
+.env
 
 
 
