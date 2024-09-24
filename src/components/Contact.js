@@ -18,6 +18,24 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    fetch('/api/send', {  
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        console.log('Email envoyé avec succès:', data.message);
+      } else {
+        console.log('Erreur d\'envoi d\'email:', data.message);
+      }
+    })
+    .catch((error) => {
+      console.error('Erreur:', error);
+    });
   };
 
   return (
