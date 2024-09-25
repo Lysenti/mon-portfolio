@@ -25,14 +25,7 @@ const Contact = () => {
       },
       body: JSON.stringify(formData),
     })
-    .then(response => {
-      
-      console.log('Raw response:', response);
-
-      return response.text();
-    })
-
-
+    .then(response => response.text ())
     .then(data => {
 
       console.log('Response text:', data);
