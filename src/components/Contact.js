@@ -35,7 +35,7 @@ const Contact = () => {
 
     .then(data => {
 
-      console.log('Response received from backend:', data);
+      console.log('Response text:', data);
 
       try {
         const jsonResponse = JSON.parse(data);
