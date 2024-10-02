@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #333;
-  background-color: rgba(51, 79, 95, 0.95);
+  background-color: rgba(14, 58, 83, 0.95);
   line-height: 1.6;
 }
 
@@ -24,3 +24,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+
+

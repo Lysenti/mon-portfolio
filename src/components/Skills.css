@@ -1,12 +1,18 @@
 
 #skills {
-    padding: 50px 0;
-    background-color: #fff;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    background-color: #D4AF37;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: inset;
   }
   
   #skills ul {
     list-style: none;
     padding: 0;
+    color: white;
   }
   
   #skills ul li {
@@ -33,31 +39,23 @@
     border-radius: 5px;
   }
 
-  @keyframes fillBar {
-    0% {
-      width: 0;
+
+  @media (max-width: 898px) {
+    #skills {
+        margin: 15px;
+        padding-top: 50px;
     }
-    100% {
-      width: 100%;
+  
+  
+  }
+
+
+  @media (max-width: 375px) {
+    #skills {
+     margin: 20px;
+     margin-top: 100px;
+     padding-top: 50px;
     }
-  }
-  
-  .skill-item {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .skill-item.visible {
-    opacity: 1;
-  }
-  
-  .progress-bar span {
-    display: block;
-    height: 100%;
-    background-color: #4a90e2;
-    border-radius: 5px;
-    width: 0; 
-    transition: width 2s ease; 
   }
   
   

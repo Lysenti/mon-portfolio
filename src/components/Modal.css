@@ -199,3 +199,11 @@ h3, h4 {
 .prev-button:hover, .next-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+@media (max-width: 375px) {
+  .modal-container {
+    margin: 20px;
+
+  }
+}

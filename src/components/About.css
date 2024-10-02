@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   color: white;
   padding: 150px 0;
+  padding-top: 200px;
   text-align: center;
   position: relative;
   min-height: 400px;
@@ -11,14 +12,22 @@
   }
   
   #about h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
-    color: white;
+    color: #d4b653;
   }
   
   #about p {
     font-size: 1.5rem;
-    margin-top: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  #about strong {
+    display: block; 
+    margin-bottom: 10px; 
+    font-size: 1.3rem;
+    color: #d4b653; 
   }
   
   /* Animation slide-in */
@@ -36,8 +45,11 @@
   /* Styles pour les différents blocs avec décalage d'apparition */
   .slide-text {
     opacity: 0;
+    max-width: 900px;
+    margin: 0 auto 30px;
     transform: translateX(-100%);
     animation: slideIn 1s forwards;
+
   }
 
   .slide-1 {
@@ -66,6 +78,44 @@
   #about > * {
     position: relative;
     z-index: 2;
+  }
+
+
+  @media (max-width: 1470px) {
+    #about {
+        margin: 20px;
+        padding-top: 100px;
+    }
+
+    #about h2 {
+      font-size: 2rem;
+    }
+  
+  }
+
+
+  @media (max-width: 725px) {
+    #about {
+        margin: 20px;
+    }
+    
+    #about h2 {
+      font-size: 1.8rem;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+    }
+
+  }
+
+
+  @media (max-width: 375px) {
+    #about {
+      margin: 20px;
+      padding-top: 170px;
+
+    }
   }
 
 

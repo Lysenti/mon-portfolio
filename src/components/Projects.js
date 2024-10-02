@@ -7,8 +7,8 @@ const Projects = () => {
   const projectList = [
     {
       name: 'Créez la page d\'accueil d\'une agence de voyage ',
-      description: 'Ce projet a consisté à apprendre les bases du développement web notamment via les langages HTML et CSS.',
-      problem: 'La prise en main de la maquette figma ainsi que la maitrise la manipulation FLEX et GRID. Gérer l\'adaptation du contenu à la taille de l\'écran.',
+      description: 'Apprendre les bases du développement web notamment via les langages HTML et CSS.',
+      problem: 'La prise en main de la maquette figma ainsi que la maitrise et la manipulation FLEX et GRID. Gérer l\'adaptation du contenu à la taille de l\'écran. Pour ce faire l\'expérimentation, l\'utilisation des outils de développement du navigateur ont été nécessaires.',
       skills: ['HTML', 'CSS'],
       link: 'https://github.com/Lysenti/project1',
       images: [
@@ -20,10 +20,10 @@ const Projects = () => {
     },
     {
       name: 'Créez une page web dynamique avec JavaScript',
-      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec Javascript.',
-      problem: 'Prendre en main la notion d\'API et passer à un nouveau langage. L\'affichage de la modale a nécessité quelques temps d\'adaptation.',
+      description: 'Créer une page d\'accueil dynamique avec Javascript.',
+      problem: 'Prendre en main la notion d\'API et passer à un nouveau langage. L\'affichage de la modale a nécessité quelques temps d\'adaptation. Ce projet a nécessité la lecture de documentations et livres relatifs à ce nouveau langage, implémenter des logs afin de comprendre les disfonctionnements rencontrés.',
       skills: ['Javascript'],
-      link: 'https://github.com/Lysenti/project2',
+      link: 'https://github.com/Lysenti/projet_3',
       images: [
         require('../assets/images/projet2_1.jpg'),
         require('../assets/images/projet2_2.jpg'),
@@ -33,10 +33,10 @@ const Projects = () => {
     },
     {
       name: 'Débuggez et optimisez un site de photographe',
-      description: 'Ce projet a consisté à analyser les erreurs dans le code préalablement fourni, constater les dysfonctionnements et mettre en place des correctifs avec des améliorations pour le référencement et l\'affichage des images.',
-      problem: 'J’ai rencontré des difficultés avec la gestion du DOM, mais j’ai appris à manipuler JavaScript efficacement.',
-      skills: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/Lysenti/project1',
+      description: 'Analyser les erreurs dans le code préalablement fourni, constater les dysfonctionnements et mettre en place des correctifs avec des améliorations pour le référencement et l\'affichage des images.',
+      problem: 'Analyser et comprendre un code préexistant, implémenter des logs afin d\'identifier les dysfonctionnements en prenant connaissance des différentes ressources sur le web',
+      skills: ['HTML', 'CSS'],
+      link: 'https://github.com/Lysenti/projet_4',
       images: [
         require('../assets/images/projet3_1.jpg'),
         require('../assets/images/projet3_2.jpg'),
@@ -45,10 +45,10 @@ const Projects = () => {
     },
     {
       name: 'Créez une application web de location immobilière avec React',
-      description: 'Ce projet consistait à créer une page d\'accueil dynamique avec HTML et CSS.',
-      problem: 'Problèmes d\'alignement et compatibilité cross-browser.',
-      skills: ['HTML', 'CSS'],
-      link: 'https://github.com/Lysenti/project2',
+      description: 'Développer une application à partir d\'une maquette figma',
+      problem: 'S\'adapter à un nouvel outil et une nouvelle structuration du code en utilisant notamment React Router. Utilisation de ressources trouvées sur le web ainsi qu\'une expérimentation active avec le recours aux logs et à la console du navigateur pour comprendre les erreurs.',
+      skills: ['Javascript' , 'REACT'],
+      link: 'https://github.com/Lysenti/projet_5',
       images: [
         require('../assets/images/projet4_1.jpg'),
         require('../assets/images/projet4_2.jpg'),
@@ -57,10 +57,10 @@ const Projects = () => {
     },
     {
       name: 'Développez le back-end d\'un site de notation de livres',
-      description: 'Ce projet a consisté à apprendre les bases du développement web.',
-      problem: 'J’ai rencontré des difficultés avec la gestion du DOM, mais j’ai appris à manipuler JavaScript efficacement.',
-      skills: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://github.com/Lysenti/project1',
+      description: 'Implémenter une logique de base de données selon un cahier des charges.',
+      problem: 'Comprendre le fonctionnement d\'une base de donnée avec les outils Express, MongoDB. Prise en main de la notion de Middleware et des opérations CRUD. Pour ce faire : pratique, expérimentation, tests, logs.',
+      skills: ['JavaScript'],
+      link: 'https://github.com/Lysenti/vieux-grimoire-app',
       images: [
         require('../assets/images/projet5_1.jpg'),
         require('../assets/images/projet5_2.jpg'),
