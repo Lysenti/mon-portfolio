@@ -1,5 +1,6 @@
 import React from 'react';
 import './Skills.css';
+import backgroundImage from '../assets/images/596.jpg';
 
 const Skills = () => {
   const skills = [
@@ -15,8 +16,11 @@ const Skills = () => {
 
   return (
     <section id="skills" className="container">
+      <div className="image-container">
+        <img src= {backgroundImage} alt="Skills background" />
+      </div>
       <div className="container">
-        <h2>COMPETENCES  :</h2>
+        <h2>COMPETENCES :</h2>
         <ul>
           {skills.map((skill, index) => (
             <li key={index}>
