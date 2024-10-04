@@ -73,7 +73,7 @@ const Projects = () => {
       description: 'Ce projet consistait à créer le site web d\'un groupe de musique tout en respectant l\'identité visuelle de celui-ci.',
       problem: 'Imaginer le design complet d\'un site, mettre en adéquation les désirs du client avec une réalité de gestion et de coût',
       skills: ['HTML', 'CSS', 'React', 'Javascript'],
-      link: 'https://github.com/Lysenti/project2',
+      link: 'https://github.com/Lysenti/sortie-d-grange',
       images: [
         require('../assets/images/projet6_1.jpg'),
         require('../assets/images/projet6_2.jpg')
