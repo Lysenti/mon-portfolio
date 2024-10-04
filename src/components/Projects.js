@@ -21,7 +21,7 @@ const Projects = () => {
     {
       name: 'Créez une page web dynamique avec JavaScript',
       description: 'Créer une page d\'accueil dynamique avec Javascript.',
-      problem: 'Prendre en main la notion d\'API et passer à un nouveau langage. L\'affichage de la modale a nécessité quelques temps d\'adaptation. Ce projet a nécessité la lecture de documentations et livres relatifs à ce nouveau langage, implémenter des logs afin de comprendre les disfonctionnements rencontrés.',
+      problem: 'Prendre en main la notion d\'API et passer à un nouveau langage. L\'affichage de la modale a nécessité quelques temps d\'adaptation. Ce projet a nécessité la lecture de documentations et livres relatifs à ce nouveau langage, implémenter des logs afin de comprendre les dysfonctionnements rencontrés.',
       skills: ['Javascript'],
       link: 'https://github.com/Lysenti/projet_3',
       images: [
